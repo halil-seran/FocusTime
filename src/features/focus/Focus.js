@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Text, View, StyleSheet } from 'react-native';
-import { TextInput } from 'react-native';
+import { TextInput } from 'react-native-paper';
 import { RoundedButton } from '../../components/RoundedButton';
 import { fontSizes, spacing } from '../../utils/sizes';
 import { colors } from '../../utils/colors';
