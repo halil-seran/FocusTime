@@ -7,6 +7,7 @@ import { colors } from './src/utils/colors';
 import { spacing } from './src/utils/sizes';
 
 export default function App() {
+  
   const [focusSubject, setFocusSubject] = useState('null');
   return (
     <View style={styles.container}>
@@ -22,7 +23,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop:Platform.OS === 'android' ? spacing.lg : spacing.md,
-    backgroundColor:colors.primary
+    paddingTop: Platform.OS === 'android' ? spacing.lg : spacing.md,
+    backgroundColor: colors.primary
   },
 });
