@@ -10,7 +10,7 @@ import { useKeepAwake } from 'expo-keep-awake';
 
 const DEFAULT_TIME = 0.1;
 
-export const Timer = ({ focusSubject, onTimerEnd }) => {
+export const Timer = ({ focusSubject, onTimerEnd, clearSubject }) => {
     useKeepAwake();
 
 
@@ -62,17 +62,22 @@ export const Timer = ({ focusSubject, onTimerEnd }) => {
             <ProgressBar
                 progress={progress}
                 color={'#B9314F'}
-                style={{ height: 15, marginTop: 20 }}
+                style={{ height: 25, marginTop: 10, margin: 10, width: '95%' }}
             />
             <View style={styles.buttonContainer}>
                 <Timing onChangeTime={changeTime} />
             </View>
-            <View style={styles.buttonContainer}>
-                {!isStarted ?
-                    <RoundedButton title="start" onPress={() => setIsStarted(true)} />
-                    :
-                    <RoundedButton title="pause" onPress={() => setIsStarted(false)} />
-                }
+            <View style={styles.bottomButtonContainer}>
+                <View style={styles.start}>
+                    {!isStarted ?
+                        <RoundedButton title="start" onPress={() => setIsStarted(true)} />
+                        :
+                        <RoundedButton title="pause" onPress={() => setIsStarted(false)} />
+                    }
+                </View>
+                <View style={styles.clearSubject} >
+                    <RoundedButton title="❌" size={50} onPress={() => clearSubject()} />
+                </View>
             </View>
         </View>
     );
@@ -105,5 +110,23 @@ const styles = StyleSheet.create({
         padding: 15,
         justifyContent: 'space-evenly',
         alignItems: 'center'
+    },
+    bottomButtonContainer: {
+        flex: 0.3,
+        flexDirection: 'row',
+        padding: 15,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    start:{
+        flex:2,
+        alignItems:"flex-end",
+        paddingLeft:45
+    },
+    clearSubject: {
+        flex:1,
+        alignItems:"flex-end",
+        paddingRight:15,
+        paddingTop:60
     }
 });

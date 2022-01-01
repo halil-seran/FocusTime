@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   titleContainer: {
-    flex: 0.5,
+    flex: 1,
     padding: spacing.md,
     justifyContent: 'center',
   },
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
   inputContainer: {
     marginTop: 18,
     flexDirection: "row",
-    //alignItems:'center'
+    //alignItems:'center',
   },
   textInput: {
     borderWidth: 1,
