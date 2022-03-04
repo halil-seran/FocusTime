@@ -51,7 +51,9 @@ const styles = StyleSheet.create({
     }),
     upperTextContainer: {
         alignItems: 'center',
-        flex: 1
+        flex: 1,
+        paddingTop:40
+
     },
     title: {
         color: 'white',
