@@ -47,7 +47,7 @@ const FocusedHistory = ({ focusHistory, onClear }) => {
 const styles = StyleSheet.create({
     historyItem: (status) => ({
         color: status > 1 ? 'red' : 'green',
-        fontSize: fontSizes.md
+        fontSize: fontSizes.lg
     }),
     upperTextContainer: {
         alignItems: 'center',
